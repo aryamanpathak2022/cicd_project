@@ -45,7 +45,8 @@ USER appuser
 COPY . .
 
 # Expose the port that the application listens on.
-EXPOSE 8000
+EXPOSE 8080
 
 # Run the application.
-CMD gunicorn '.venv.Lib.site-packages.werkzeug.wsgi' --bind=0.0.0.0:8000
+CMD ["python", "server.py"]
+
